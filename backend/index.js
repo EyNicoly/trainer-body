@@ -20,9 +20,6 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// ===============================================================
-// ROTAS DA API
-// ===============================================================
 
 // Rota de Teste
 app.get('/api', (req, res) => {
@@ -98,11 +95,6 @@ app.post('/api/auth/login', async (req, res) => {
     res.status(500).json({ message: 'Erro ao fazer login.', error: error.message });
   }
 });
-
-
-// ===============================================================
-// INICIA O SERVIDOR
-// ===============================================================
 
 sequelize.sync().then(() => {
   console.log('Banco de dados conectado e modelos sincronizados.');
