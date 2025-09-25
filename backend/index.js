@@ -19,6 +19,7 @@ const PORT = process.env.PORT || 5000;
 // Configuração de Middlewares
 app.use(cors());
 app.use(express.json());
+//kdopdjpjdp
 
 
 // Rota de Teste
